@@ -1,3 +1,8 @@
+## 🌐 Live App
+
+You can try the app live here:  
+(https://josh-zeiontz.shinyapps.io/bondshinyclean/)
+
 # Bond Sensitivity Analysis App
 
 This R Shiny application allows users to analyze the interest rate risk of a custom bond portfolio. It supports the calculation of key fixed income metrics including:
