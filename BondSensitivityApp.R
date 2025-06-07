@@ -2,7 +2,6 @@ library(shiny)
 library(ggplot2)
 library(writexl)
 
-# --- Bond Functions ---
 bond_price <- function(face, coupon_rate, ytm, years, freq) {
   n <- years * freq
   coupon <- face * coupon_rate / freq
@@ -49,7 +48,6 @@ convexity <- function(face, coupon_rate, ytm, years, freq) {
   return(conv / (price * freq^2))
 }
 
-# --- UI ---
 ui <- fluidPage(
   titlePanel("Bond Portfolio Sensitivities + Interactive Stress Testing"),
   
@@ -75,7 +73,6 @@ ui <- fluidPage(
   downloadButton("download_excel", "Download All Results (Excel)")
 )
 
-# --- Server ---
 server <- function(input, output, session) {
   sens_data <- reactiveVal()
   stress_data <- reactiveVal()
